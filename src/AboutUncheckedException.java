@@ -2,7 +2,7 @@
 import javax.swing.*;
 import java.util.Scanner;
 
-public class AboutMe { //UncheckedExeption
+public class AboutUncheckedException { //UncheckedExeption
 
     public static int dividir(int a, int b){return a / b;}
 

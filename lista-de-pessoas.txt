@@ -1,0 +1,8 @@
+Lista de Pessoas do Sistema
+
+Henrique (codNasc 13041984)
+Pedro (codNasc 20022012)
+Erick (codNasc 12062008)
+Patricia (codNasc 15031983)
+
+
