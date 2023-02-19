@@ -1,17 +1,18 @@
 import javax.swing.*;
 import java.io.*;
 
-public class AboutCheckedException {
-    public static void main(String[] args) {
-        String nomeDoArquivo = "lista-de-pessoas.txt";
+    public class AboutCheckedException {
+    public static void main(String[] args) throws ImpossivelAbrirArquivoException {
+        String nomeDoArquivo = "listaa-de-pessoas.txt";
 
         try {
             imprimirArquivoNoConsole(nomeDoArquivo);
         } catch (IOException e) {
-            JOptionPane.showMessageDialog(null, "Verifique o arquivo enviado");
-            e.printStackTrace();
+            throw new ImpossivelAbrirArquivoException("lista-de-pessoas.txt");
+            //JOptionPane.showMessageDialog(null, "Verifique o arquivo enviado");
+            //e.printStackTrace();
         } finally {
-            System.out.println("Chgou no finally");
+            System.out.println("Chegou no finally");
         }
 
         System.out.println("Apesar da exception ou não, o programa continua...");
@@ -34,3 +35,25 @@ public class AboutCheckedException {
         br.close();
     }
 }
+
+class ImpossivelAbrirArquivoException extends Exception{
+
+        private String nomeDoArquivoT;
+
+    public ImpossivelAbrirArquivoException(String nomeDoArquivoT) {
+        super("O arquivo nao foi carregado verifique a pasta ou o diretorio");
+        this.nomeDoArquivoT = nomeDoArquivoT;
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
